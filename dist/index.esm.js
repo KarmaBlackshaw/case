@@ -2,6 +2,16 @@ function kebabCase(str) {
   return str.replace(/([a-z])([A-Z])/g, '$1-$2').replace(/[\s_]+/g, '-').toLowerCase();
 }
 
+function sentenceCase(str) {
+  if (!str) {
+    return '';
+  }
+  const trimmed = str.trim();
+  const firstChar = trimmed[0].toUpperCase();
+  const rest = trimmed.slice(1).toLowerCase();
+  return `${firstChar}${rest}`;
+}
+
 function titleCase(str) {
   if (!str) {
     return '';
@@ -12,6 +22,7 @@ function titleCase(str) {
 
 var index = {
   kebabCase,
+  sentenceCase,
   titleCase
 };
 
