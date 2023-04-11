@@ -32,6 +32,11 @@ const myKebabCaseString = kebabCase('hello world');
 
 `@jeash/case` exports the following methods:
 
+**jejeCase**
+```js 
+jejeCase('Hello World') // => h3LL0 w0RLD
+ ````
+
 **kebabCase**
 ```js 
 kebabCase('Hello World') // => hello-world

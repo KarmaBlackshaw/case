@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.4](https://github.com/KarmaBlackshaw/case/compare/1.0.3...1.0.4) - 2023-04-11
+
+### Commits
+
+- chore: update readme design [`cd1dda5`](https://github.com/KarmaBlackshaw/case/commit/cd1dda54386f024b86381890c71f4def95b95db2)
+- chore(release): 1.0.4 [`8fbf03a`](https://github.com/KarmaBlackshaw/case/commit/8fbf03a5600c97e83bf991ba1d412e951f2b70d5)
+
 ## [1.0.3](https://github.com/KarmaBlackshaw/case/compare/1.0.2...1.0.3) - 2023-04-11
 
 ### Commits
