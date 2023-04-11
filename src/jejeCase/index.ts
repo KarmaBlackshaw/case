@@ -2,7 +2,7 @@ const isProbablyTrue = () => Math.random() > 0.4
 const isVowel = (char: string) => char && 'aeiou'.includes(char.toLowerCase())
 const isLastCharVowel = (str: string) => isVowel(str[str.length - 1])
 
-export function toJeje(str: string) {
+export default function toJeje(str: string) {
   if (!str) {
     return '';
   }
