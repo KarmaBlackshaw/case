@@ -1,5 +1,3 @@
-const path = require('path');
-
 const resolve = require('@rollup/plugin-node-resolve')
 const commonjs = require('@rollup/plugin-commonjs')
 const babel = require('@rollup/plugin-babel')
@@ -7,35 +5,57 @@ const fg = require('fast-glob')
 
 const extensions = ['.js', '.jsx', '.ts', '.tsx'];
 
-const files = fg.sync('./src/*.ts', {
+const plugins = [
+  resolve({ extensions }),
+  commonjs(),
+  babel({ babelHelpers: 'runtime', extensions, include: ['src/**/*'] })
+]
+
+const files = fg.sync('./src/**/*.ts', {
   cwd: process.cwd(),
-  ignore: ['./src/*.test.ts'],
+  ignore: ['./src/*.test.ts', './src/index.ts']
 })
 
 const inputs = files.reduce((acc, file) => {
-  const extension = path.extname(file); // returns '.tsx'
-  const basename = path.basename(file, extension);
+  const name = file.split('/')[2]
 
-  return {...acc, [basename]: file};
+  return { ...acc, [name]: file };
 }, {});
 
-module.exports = Object.entries(inputs).map(([folder, input]) => ({
-  input,
+const buildFunctions = Object.entries(inputs).map(([name, input]) => {
+  return {
+    input,
+    output: [
+      {
+        file: `dist/${name}.js`,
+        format: 'cjs',
+        sourcemap: false
+      },
+      {
+        file: `dist/${name}.esm.js`,
+        format: 'esm',
+        sourcemap: false
+      }
+    ],
+    plugins
+  }
+});
+
+buildFunctions.push({
+  input: './src/index.ts',
   output: [
     {
-      file: `dist/${folder}.js`,
+      file: `dist/index.js`,
       format: 'cjs',
-      sourcemap: false,
+      sourcemap: false
     },
     {
-      file: `dist/${folder}.esm.js`,
+      file: `dist/index.esm.js`,
       format: 'esm',
-      sourcemap: false,
-    },
+      sourcemap: false
+    }
   ],
-  plugins: [
-    resolve({ extensions }),
-    commonjs(),
-    babel({ babelHelpers: 'runtime', extensions, include: ['src/**/*'] }),
-  ],
-}));
+  plugins
+})
+
+module.exports = buildFunctions

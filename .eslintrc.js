@@ -43,6 +43,7 @@ module.exports = {
         argsIgnorePattern: 'next|_.+',
         varsIgnorePattern: '_'
       }
-    ]
+    ],
+    "space-infix-ops": ["error", { "int32Hint": false }]
   }
 }

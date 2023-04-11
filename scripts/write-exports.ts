@@ -3,7 +3,7 @@ import path from 'path'
 import fs from 'fs'
 import pkg from '../package.json'
 
-const files = fg.sync('./src/*.ts', {
+const files = fg.sync('./src/**/*.ts', {
   cwd: process.cwd(),
   ignore: ['./src/*.test.ts', './src/index.ts']
 })
@@ -18,17 +18,16 @@ const pkgExports = {
 }
 
 files.forEach(file => {
-  const extension = path.extname(file); // returns '.tsx'
-  const basename = path.basename(file, extension);
+  const name = file.split('/')[2]
 
-  contents += `import ${basename} from './${basename}'\n`
+  contents += `import ${name} from './${name}'\n`
 
-  exportFunctions.push(basename)
+  exportFunctions.push(name)
 
   // @ts-ignore
-  pkgExports[`./${basename}`] = {
-    require: `./dist/${basename}.js`,
-    import: `./dist/${basename}.esm.js`
+  pkgExports[`./${name}`] = {
+    require: `./dist/${name}.js`,
+    import: `./dist/${name}.esm.js`
   }
 })
 
