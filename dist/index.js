@@ -1,5 +1,18 @@
 'use strict';
 
+function toAlternating(str) {
+  return str.split('').map((char, i) => i % 2 === 0 ? char.toUpperCase() : char.toLowerCase()).join('');
+}
+
+function toAlternatingInverse(str) {
+  return str.split('').map((char, i) => i % 2 === 1 ? char.toUpperCase() : char.toLowerCase()).join('');
+}
+
+const isUpperCase = char => char.toUpperCase() === char;
+function toInverse(str) {
+  return str.split('').map(char => isUpperCase(char) ? char.toLowerCase() : char.toUpperCase()).join('');
+}
+
 const isProbablyTrue = () => Math.random() > 0.4;
 const isVowel = char => char && 'aeiou'.includes(char.toLowerCase());
 const isLastCharVowel = str => isVowel(str[str.length - 1]);
@@ -58,12 +71,30 @@ function titleCase(str) {
   return words.map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
 }
 
+function toWide(str) {
+  return str.split('').join(' ');
+}
+
+function toWideLower$1(str) {
+  return toWide(str).toLowerCase();
+}
+
+function toWideLower(str) {
+  return toWide(str).toUpperCase();
+}
+
 var index = {
+  alternatingCase: toAlternating,
+  alternatingInverseCase: toAlternatingInverse,
+  inverseCase: toInverse,
   jejeCase: toJeje,
   kebabCase,
   sentenceCase,
   snakeCase,
-  titleCase
+  titleCase,
+  wideCase: toWide,
+  wideLowerCase: toWideLower$1,
+  wideUpperCase: toWideLower
 };
 
 module.exports = index;

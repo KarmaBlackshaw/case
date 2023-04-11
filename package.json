@@ -1,6 +1,6 @@
 {
   "name": "@jeash/case",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -8,6 +8,18 @@
     ".": {
       "require": "./dist/index.js",
       "import": "./dist/index.esm.js"
+    },
+    "./alternatingCase": {
+      "require": "./dist/alternatingCase.js",
+      "import": "./dist/alternatingCase.esm.js"
+    },
+    "./alternatingInverseCase": {
+      "require": "./dist/alternatingInverseCase.js",
+      "import": "./dist/alternatingInverseCase.esm.js"
+    },
+    "./inverseCase": {
+      "require": "./dist/inverseCase.js",
+      "import": "./dist/inverseCase.esm.js"
     },
     "./jejeCase": {
       "require": "./dist/jejeCase.js",
@@ -28,6 +40,18 @@
     "./titleCase": {
       "require": "./dist/titleCase.js",
       "import": "./dist/titleCase.esm.js"
+    },
+    "./wideCase": {
+      "require": "./dist/wideCase.js",
+      "import": "./dist/wideCase.esm.js"
+    },
+    "./wideLowerCase": {
+      "require": "./dist/wideLowerCase.js",
+      "import": "./dist/wideLowerCase.esm.js"
+    },
+    "./wideUpperCase": {
+      "require": "./dist/wideUpperCase.js",
+      "import": "./dist/wideUpperCase.esm.js"
     }
   },
   "scripts": {

@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.6](https://github.com/KarmaBlackshaw/case/compare/1.0.5...1.0.6) - 2023-04-11
+
+### Commits
+
+- chore(release): 1.0.6 [`16319e3`](https://github.com/KarmaBlackshaw/case/commit/16319e32290b8449e364860ac561b3738d3a61f5)
+- chore: add snakeCase [`fc85422`](https://github.com/KarmaBlackshaw/case/commit/fc85422aadd29d8e0c5c37f7dd5d38b9751b1b58)
+
 ## [1.0.5](https://github.com/KarmaBlackshaw/case/compare/1.0.4...1.0.5) - 2023-04-11
 
 ### Commits

@@ -32,9 +32,24 @@ const myKebabCaseString = kebabCase('hello world');
 
 `@jeash/case` exports the following methods:
 
+**alternatingCase**
+```js 
+alternatingCase('Hello World') // => HeLlO WoRlD
+ ````
+
+**alternatingInverseCase**
+```js 
+alternatingInverseCase('Hello World') // => hElLo wOrLd
+ ````
+
+**inverseCase**
+```js 
+inverseCase('Hello World') // => hELLO wORLD
+ ````
+
 **jejeCase**
 ```js 
-jejeCase('Hello World') // => h3LlOH w0RLD
+jejeCase('Hello World') // => H3LL0H W0RLD
  ````
 
 **kebabCase**
@@ -55,6 +70,21 @@ snakeCase('Hello World') // => hello_world
 **titleCase**
 ```js 
 titleCase('Hello World') // => Hello World
+ ````
+
+**wideCase**
+```js 
+wideCase('Hello World') // => H e l l o   W o r l d
+ ````
+
+**wideLowerCase**
+```js 
+wideLowerCase('Hello World') // => h e l l o   w o r l d
+ ````
+
+**wideUpperCase**
+```js 
+wideUpperCase('Hello World') // => H E L L O   W O R L D
  ````
 
 ### Contributing
