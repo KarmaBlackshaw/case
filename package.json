@@ -29,7 +29,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c rollup.config.js",
-    "release": "release-it",
+    "release": "release-it --ci",
     "write-exports": "ts-node ./scripts/write-exports.ts",
     "write-readme": "ts-node ./scripts/write-readme.ts"
   },
