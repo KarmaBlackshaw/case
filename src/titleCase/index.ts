@@ -1,4 +1,4 @@
-export default function titleCase(str: string) {
+export default function titleCase(str: string): string {
   if (!str) {
     return '';
   }

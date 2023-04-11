@@ -3,6 +3,7 @@ const changelogCmd = `npx auto-changelog --commit-limit false --template ./templ
 module.exports = {
   hooks: {
     'after:bump': [
+      'npm run write-readme',
       'npm run write-exports',
       changelogCmd,
       'npm run build',

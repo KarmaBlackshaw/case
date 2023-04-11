@@ -18,8 +18,8 @@ const myTitleCaseString = titleCase('hello world');
 const myKebabCaseString = kebabCase('hello world');
 ```
 
-Alternatively, you can import the methods individually:
 
+Alternatively, you can import the methods individually:
 ```js
 import titleCase from '@jeash/case/titleCase';
 import kebabCase from '@jeash/case/kebabCase';
@@ -29,13 +29,17 @@ const myKebabCaseString = kebabCase('hello world');
 ```
 
 ### API
+
 `@jeash/case` exports the following methods:
 
-`titleCase(str: string): string`
-Converts a string to title case. For example, "hello world" becomes "Hello World".
+`kebabCase`
+kebabCase('Hello World') // => hello-world
 
-`kebabCase(str: string): string`
-Converts a string to kebab case. For example, "hello world" becomes "hello-world".
+`sentenceCase`
+sentenceCase('Hello World') // => Hello world
+
+`titleCase`
+titleCase('Hello World') // => Hello World
 
 ### Contributing
 Contributions to `@jeash/case` are welcome. If you have any bug fixes, improvements or feature requests, please submit a pull request on GitHub.

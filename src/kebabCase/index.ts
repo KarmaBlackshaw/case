@@ -1,4 +1,4 @@
-export default function kebabCase(str: string) {
+export default function kebabCase(str: string): string {
   return str
     .replace(/([a-z])([A-Z])/g, '$1-$2')
     .replace(/[\s_]+/g, '-')

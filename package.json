@@ -22,7 +22,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c rollup.config.js",
     "release": "release-it",
-    "write-exports": "ts-node ./scripts/write-exports.ts"
+    "write-exports": "ts-node ./scripts/write-exports.ts",
+    "write-readme": "ts-node ./scripts/write-readme.ts"
   },
   "publishConfig": {
     "access": "public"
