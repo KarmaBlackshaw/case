@@ -5,7 +5,7 @@ import pkg from '../package.json'
 
 const files = fg.sync('./src/*.ts', {
   cwd: process.cwd(),
-  ignore: ['./src/*.test.ts', './src/index.ts'],
+  ignore: ['./src/*.test.ts', './src/index.ts']
 })
 
 let contents = ''
@@ -13,7 +13,7 @@ let exportFunctions: string[] = []
 const pkgExports = {
   '.': {
     require: './dist/index.js',
-    import: './dist/index.esm.js',
+    import: './dist/index.esm.js'
   }
 }
 
@@ -28,7 +28,7 @@ files.forEach(file => {
   // @ts-ignore
   pkgExports[`./${basename}`] = {
     require: `./dist/${basename}.js`,
-    import: `./dist/${basename}.esm.js`,
+    import: `./dist/${basename}.esm.js`
   }
 })
 
@@ -39,7 +39,6 @@ fs.writeFileSync(indexPath, contents)
 
 // @ts-ignore
 pkg.exports = pkgExports
-
 
 const pkgPath = path.join(process.cwd(), 'package.json')
 fs.writeFileSync(pkgPath, JSON.stringify(pkg, null, 2))
