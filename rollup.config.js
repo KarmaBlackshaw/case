@@ -1,20 +1,22 @@
+const path = require('path');
+
 const resolve = require('@rollup/plugin-node-resolve')
 const commonjs = require('@rollup/plugin-commonjs')
 const babel = require('@rollup/plugin-babel')
-
 const fg = require('fast-glob')
 
 const extensions = ['.js', '.jsx', '.ts', '.tsx'];
 
-const files = fg.sync('./src/**/index.ts', {
-  cwd: process.cwd()
+const files = fg.sync('./src/*.ts', {
+  cwd: process.cwd(),
+  ignore: ['./src/*.test.ts'],
 })
 
 const inputs = files.reduce((acc, file) => {
-  const [dir] = file.split('/').slice(-2, -1);
-  // @ts-ignore
-  acc[dir] = file;
-  return acc;
+  const extension = path.extname(file); // returns '.tsx'
+  const basename = path.basename(file, extension);
+
+  return {...acc, [basename]: file};
 }, {});
 
 module.exports = Object.entries(inputs).map(([folder, input]) => ({
