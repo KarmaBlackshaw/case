@@ -1,4 +1,4 @@
-export function toAlternating (str: string) {
+export default function toAlternating (str: string) {
   return str
     .split('')
     .map((char, i) => i % 2 === 0
