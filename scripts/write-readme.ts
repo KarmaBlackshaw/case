@@ -69,7 +69,7 @@ ${apis}
 Contributions to \`@jeash/case\` are welcome. If you have any bug fixes, improvements or feature requests, please submit a pull request on GitHub.
 `;
 
-  fs.writeFileSync('readme.md', readmeTemplate);
+  fs.writeFileSync('README.md', readmeTemplate);
 }
 
 run()
