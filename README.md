@@ -34,7 +34,7 @@ const myKebabCaseString = kebabCase('hello world');
 
 **jejeCase**
 ```js 
-jejeCase('Hello World') // => h3LL0 w0RLD
+jejeCase('Hello World') // => h3LlOH w0RLD
  ````
 
 **kebabCase**
@@ -45,6 +45,11 @@ kebabCase('Hello World') // => hello-world
 **sentenceCase**
 ```js 
 sentenceCase('Hello World') // => Hello world
+ ````
+
+**snakeCase**
+```js 
+snakeCase('Hello World') // => hello_world
  ````
 
 **titleCase**

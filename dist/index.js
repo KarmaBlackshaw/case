@@ -46,6 +46,10 @@ function sentenceCase(str) {
   return `${firstChar}${rest}`;
 }
 
+function snakeCase(str) {
+  return str.replace(/\s+/g, '_').toLowerCase();
+}
+
 function titleCase(str) {
   if (!str) {
     return '';
@@ -58,6 +62,7 @@ var index = {
   jejeCase: toJeje,
   kebabCase,
   sentenceCase,
+  snakeCase,
   titleCase
 };
 

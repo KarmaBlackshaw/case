@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.5](https://github.com/KarmaBlackshaw/case/compare/1.0.4...1.0.5) - 2023-04-11
+
+### Commits
+
+- chore(release): 1.0.5 [`28ba1f4`](https://github.com/KarmaBlackshaw/case/commit/28ba1f409d9ccae66cc71c1665b9e4c95db88ce2)
+- chore: add jeje [`43b1203`](https://github.com/KarmaBlackshaw/case/commit/43b1203faf5e486fe9216ad1e02abdf889d32d99)
+- chore: update export for jejeCase [`b49aed1`](https://github.com/KarmaBlackshaw/case/commit/b49aed147b02e738c2902cd8e64c23be67b04b8a)
+
 ## [1.0.4](https://github.com/KarmaBlackshaw/case/compare/1.0.3...1.0.4) - 2023-04-11
 
 ### Commits

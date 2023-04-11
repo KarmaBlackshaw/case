@@ -1,6 +1,6 @@
 {
   "name": "@jeash/case",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -20,6 +20,10 @@
     "./sentenceCase": {
       "require": "./dist/sentenceCase.js",
       "import": "./dist/sentenceCase.esm.js"
+    },
+    "./snakeCase": {
+      "require": "./dist/snakeCase.js",
+      "import": "./dist/snakeCase.esm.js"
     },
     "./titleCase": {
       "require": "./dist/titleCase.js",
