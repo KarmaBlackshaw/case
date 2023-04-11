@@ -22,8 +22,8 @@ async function run() {
 
       const name = names[i]
 
-      content += `\`${name}\`\n`
-      content += `${name}('${testWord}') // => ${func(testWord)}\n\n`
+      content += `**${name}**\n`
+      content += `\`\`\`js \n${name}('${testWord}') // => ${func(testWord)}\n \`\`\`\`\n\n`
     }
 
     return content.trim()

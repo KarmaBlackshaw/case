@@ -32,14 +32,20 @@ const myKebabCaseString = kebabCase('hello world');
 
 `@jeash/case` exports the following methods:
 
-`kebabCase`
+**kebabCase**
+```js 
 kebabCase('Hello World') // => hello-world
+ ````
 
-`sentenceCase`
+**sentenceCase**
+```js 
 sentenceCase('Hello World') // => Hello world
+ ````
 
-`titleCase`
+**titleCase**
+```js 
 titleCase('Hello World') // => Hello World
+ ````
 
 ### Contributing
 Contributions to `@jeash/case` are welcome. If you have any bug fixes, improvements or feature requests, please submit a pull request on GitHub.
