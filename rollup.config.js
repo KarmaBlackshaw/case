@@ -16,15 +16,11 @@ const files = fg.sync('./src/**/*.ts', {
   ignore: ['./src/*.test.ts', './src/index.ts']
 })
 
-const inputs = files.reduce((acc, file) => {
+const buildFunctions = files.map(file => {
   const name = file.split('/')[2]
 
-  return { ...acc, [name]: file };
-}, {});
-
-const buildFunctions = Object.entries(inputs).map(([name, input]) => {
   return {
-    input,
+    input: file,
     output: [
       {
         file: `dist/${name}.js`,
