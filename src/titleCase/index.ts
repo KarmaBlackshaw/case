@@ -1,4 +1,4 @@
-function titleCase(str) {
+export default function titleCase(str: string) {
   if (!str) return '';
 
   const words = str.toLowerCase().split(' ');
