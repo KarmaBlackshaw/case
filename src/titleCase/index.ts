@@ -1,5 +1,10 @@
+// helpers
+import beautifyText from '../../helpers/beautifyText'
+
+// types
 type Options = {
-  transform: string[]
+  transform?: string[],
+  beautify?: boolean
 }
 
 export default function titleCase(
@@ -11,24 +16,37 @@ export default function titleCase(
   }
 
   const {
-    transform = []
+    transform = [],
+    beautify = false
   } = options
 
   const words = str.toLowerCase().split(' ');
 
-  const titleCase = words
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ');
+  const initialResult = words
+    .map(word => {
+      const firstLetterIndex = word.search(/[a-zA-Z]/)
+
+      const capitalizedWord = word.slice(0, firstLetterIndex) +
+      word.charAt(firstLetterIndex).toUpperCase() +
+      word.slice(firstLetterIndex + 1)
+
+      return capitalizedWord
+    })
+    .join(' ')
+
+  const result = beautify
+    ? beautifyText(initialResult)
+    : initialResult
 
   if (transform.length) {
-    let tempTitleCase = titleCase
+    let tempResult = result
 
     transform.forEach(phrase => {
-      tempTitleCase = tempTitleCase.replace(new RegExp(phrase, 'gi'), phrase)
+      tempResult = tempResult.replace(new RegExp(phrase, 'gi'), phrase)
     })
 
-    return tempTitleCase
+    return tempResult
   }
 
-  return titleCase
+  return result
 }

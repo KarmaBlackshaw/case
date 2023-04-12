@@ -10,7 +10,7 @@ describe('[titleCase]', () => {
     expect(observed).toEqual(expected)
   });
 
-  it('should work properly with ', () => {
+  it('should work properly with word transform', () => {
     const observed = func('hello world', {
       transform: ['WORLD']
     })
@@ -20,12 +20,23 @@ describe('[titleCase]', () => {
     expect(observed).toEqual(expected)
   });
 
-  it('should work properly with ', () => {
+  it('should work properly with phrase transform', () => {
     const observed = func('I am the Megamind', {
       transform: ['THE MEGAMIND']
     })
 
     const expected = 'I Am THE MEGAMIND'
+
+    expect(observed).toEqual(expected)
+  });
+
+  it('should work properly with beautified quotes', () => {
+    const observed = func('"I am the Megamind"', {
+      transform: ['THE MEGAMIND'],
+      beautify: true
+    })
+
+    const expected = '“I Am THE MEGAMIND”'
 
     expect(observed).toEqual(expected)
   });
