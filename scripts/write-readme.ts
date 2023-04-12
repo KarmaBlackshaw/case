@@ -30,7 +30,7 @@ async function run() {
   })()
 
   const readmeTemplate = `# @jeash/case
-A lightweight package for converting string cases. It provides two methods, titleCase and kebabCase, to convert a string to title case or kebab case, respectively.
+A lightweight package for converting string cases.
 
 ### Installation
 Install \`@jeash/case\` using npm:
