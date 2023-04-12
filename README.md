@@ -1,5 +1,5 @@
 # @jeash/case
-A lightweight package for converting string cases. It provides two methods, titleCase and kebabCase, to convert a string to title case or kebab case, respectively.
+A lightweight package for converting string cases.
 
 ### Installation
 Install `@jeash/case` using npm:
@@ -49,7 +49,7 @@ inverseCase('Hello World') // => hELLO wORLD
 
 **jejeCase**
 ```js 
-jejeCase('Hello World') // => H3LL0H W0RLD
+jejeCase('Hello World') // => HElLoH WOrlD
  ````
 
 **kebabCase**
